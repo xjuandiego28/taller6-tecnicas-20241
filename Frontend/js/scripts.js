@@ -13,3 +13,50 @@ function showPassword(){
       show.type='password';
   }
 }
+
+function registerUser() {
+  const firstName = document.getElementById('first_name').value;
+  const lastName = document.getElementById('last_name').value;
+  const userName = document.getElementById('user_name').value;
+  const userPhone = document.getElementById('user_phone').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  const passwordConfirmation = document.getElementById('password_confirmation').value;
+  
+  if (!firstName || !lastName || !userName || !userPhone || !email || !password || !passwordConfirmation) {
+    return;
+  }
+
+  if (password !== passwordConfirmation) {
+    alert("Las contraseñas no coinciden");
+    return;
+  }
+
+  // Crea un objeto con los datos del usuario
+  const user = {
+    userNickname: userName,
+    userName: firstName,
+    userLastName: lastName,
+    userPhone: userPhone,
+    userPassword: password,
+    userEmail: email
+  };
+
+  // Envía una solicitud POST al backend
+  fetch('http://localhost:8080/users', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(user)
+  })
+  .then(response => response.json())
+  .then(data => {
+    alert("Usuario registrado exitosamente");
+    window.open("../views/perfil.html", "_self");
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    alert("Error al registrar el usuario");
+  });
+}

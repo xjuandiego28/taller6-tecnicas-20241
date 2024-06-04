@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Registro</title>
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
     <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
     <link href="../styles/styles.css" rel="stylesheet" />
+    <script src="../js/scripts.js"></script>
   </head>
   
   <body id = "page-top">
@@ -44,38 +45,38 @@
                 <div class="row">
                   <div class="col-sm-6 col-md-6">
                     <div class="form-group">
-                      <input type="text" name="first_name" id="first_name" class="form-control" placeholder="Nombre" tabindex="1">
+                      <input type="text" name="first_name" id="first_name" required class="form-control" placeholder="Nombre" tabindex="1">
                     </div>
                   </div>
                     <div class=" col-sm-6 col-md-6">
                       <div class="form-group">
-                        <input type="text" name="last_name" id="last_name" class="form-control " placeholder="Apellido" tabindex="2">
+                        <input type="text" name="last_name" id="last_name" required class="form-control " placeholder="Apellido" tabindex="2">
                       </div>
                     </div>
                   </div>
                   <div class="form-group">
-                    <input type="text" name="user_name" id="user_name" class="form-control " placeholder="Nombre de usuario" tabindex="3">
+                    <input type="text" name="user_name" id="user_name" required class="form-control " placeholder="Nombre de usuario" tabindex="3">
                   </div>
                   <div class="form-group">
-                    <input type="number" name="user_phone" id="user_phone" class="form-control " placeholder="Teléfono" tabindex="4">
+                    <input type="number" name="user_phone" id="user_phone" required class="form-control " placeholder="Teléfono" tabindex="4">
                   </div>
                   <div class="form-group">
-                    <input type="email" name="email" id="email" class="form-control " placeholder="Email" tabindex="5">
+                    <input type="email" name="email" id="email" required class="form-control" placeholder="Email" tabindex="5">
                   </div>
                   <div class="row">
                     <div class=" col-sm-6 col-md-6">
                       <div class="form-group">
-                        <input type="password" name="password" id="password" class="form-control " placeholder="Contraseña" tabindex="6">
+                        <input type="password" name="password" id="password" required class="form-control " placeholder="Contraseña" tabindex="6">
                       </div>
                     </div>
                     <div class=" col-sm-6 col-md-6">
                       <div class="form-group">
-                        <input type="password" name="password_confirmation" id="password_confirmation" class="form-control " placeholder="Confirmar contraseña" tabindex="7">
+                        <input type="password" name="password_confirmation" required id="password_confirmation" class="form-control " placeholder="Confirmar contraseña" tabindex="7">
                       </div>
                     </div>
                   </div>
                   <div class = "text-center">
-                    <button type="submit" class = "btn btn-primary rounded-pill">Regístrate</button>
+                    <button type="submit" class = "btn btn-primary rounded-pill" onclick="registerUser()">Regístrate</button>
                   </div>
                   <hr style= "margin-top: 0.9rem; margin-bottom: 0.4rem;" >
                   <div class="form-group">
