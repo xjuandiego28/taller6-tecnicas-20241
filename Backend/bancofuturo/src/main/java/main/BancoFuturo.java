@@ -1,12 +1,12 @@
-package com.project.project6;
+package main;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BancofuturoApplication {
+public class BancoFuturo {
 
     public static void main(String[] args) {
-        SpringApplication.run(BancofuturoApplication.class, args);
+        SpringApplication.run(BancoFuturo.class, args);
     }
 }

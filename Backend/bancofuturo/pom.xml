@@ -14,7 +14,9 @@
     <name>bancofuturo</name>
     <description>Backend Banco Futuro</description>
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>21</java.version>
+        <exec.mainClass>main.BancoFuturo</exec.mainClass>
     </properties>
     <dependencies>
         <dependency>
